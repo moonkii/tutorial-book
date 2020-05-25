@@ -1,6 +1,7 @@
 # Facebook Messenger API (챗봇 만들기)
 
 ## 페이스북 페이지 및 앱 만들기
+
 1. 페이스북 페이지 생성 후 페이지 관리화면에서  
 `버튼추가 > 연락하기 > 메시지 보내기` 로 메신저 오픈  
 
@@ -19,24 +20,33 @@ Messenger 설정의 Webhooks 에서
 ## API 서버 만들기
 
 ### 프로젝트 준비(express, ngrok 사용)
+
 ```shell script
 # ngrok 설치
-$ brew cask install ngrok
+brew cask install ngrok
 
 # 프로젝트 생성
-$ mkdir PROJECT_NAME
-$ cd PROJECT_NAME
-$ npm init -y
-$ npm install express body-parser request
+mkdir PROJECT_NAME
+
+cd PROJECT_NAME
+
+npm init -y
+
+npm install express body-parser request
 ```
 
 ### 서버 실행 및 콜백 URL 주소 얻기
+
+`app.js`
+
 ```shell script
-$ npm start
-$ ngrok http 3000
+npm start
+
+ngrok http 3000
 ```
 
 # 참고 링크
+
  - [Facebook for Developers](https://developers.facebook.com/docs/messenger-platform)
  - [Express.js](https://expressjs.com/en/starter/installing.html)
  - [ngrok](https://ngrok.com/docs)
