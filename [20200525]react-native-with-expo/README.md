@@ -1,4 +1,4 @@
-# Expo 를 이용해 React Native 모바일 앱 생성하기
+# Expo 를 이용해 React Native 
 
 ## Expo 로 프로젝트 생성하기
 
