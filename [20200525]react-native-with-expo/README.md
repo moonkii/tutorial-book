@@ -16,3 +16,6 @@ npm i -D expo-cli
 
 expo start
 ```
+
+## 참고
+[아샬 - 10분만에 React Native 시작하기](https://www.youtube.com/watch?v=8-AVUNraLsk)
