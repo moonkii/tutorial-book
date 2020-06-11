@@ -85,7 +85,7 @@ npx eslint --init
 # > JavaScript
 ```
 
-## Emotion
+### Emotion
 
 React 와 Emotion 을 함께 사용하는 경우 `@emotion/core` 를 설치해줘야 한다.
 
