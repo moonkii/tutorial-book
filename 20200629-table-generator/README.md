@@ -23,6 +23,8 @@ npm i axios cheerio sanitize-html
 
 ## 테이블 HTML 추출하기
 
+- [table-generator.js](https://github.com/moonkii/tutorial-book/blob/master/20200629-table-generator/table-generator.js)
+
 리엑트에서 `<table>` 의 내부에 삽입하기 위헤 `<table> </table>` 을 제외한 내부 태그만 속성을 모두 제거한 HTML 코드를 추출
 
 ```bash
