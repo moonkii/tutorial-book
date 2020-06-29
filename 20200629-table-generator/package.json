@@ -1,0 +1,17 @@
+{
+  "name": "20200629-table-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "table-generator.js",
+  "scripts": {
+    "start": "node table-generator.js",
+    "tables": "node table-generator.js > data/table.json"
+  },
+  "author": "Noah",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "sanitize-html": "^1.27.0"
+  }
+}
