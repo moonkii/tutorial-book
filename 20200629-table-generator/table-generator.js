@@ -1,56 +1,59 @@
+const fs = require('fs');
+const { promisify } = require('util');
+
 const axios = require('axios');
-const cheerio = require('cheerio');
 const sanitizeHtml = require('sanitize-html');
+const { parse } = require('node-html-parser');
+const pretty = require('pretty');
 
 const { log: print } = console;
 
-const SHEET_ID = '2PACX-1vRiYttiD021c-nfxCdxLE_tDNDG16e9foFyisqyrRSb-rKZd13VfL6y9eePWtV6IdD_Zi5o1fecmWz9';
+const DOCUMENT_ID = '2PACX-1vRiYttiD021c-nfxCdxLE_tDNDG16e9foFyisqyrRSb-rKZd13VfL6y9eePWtV6IdD_Zi5o1fecmWz9';
+const DOCUMENT_URL = `https://docs.google.com/spreadsheets/d/e/${DOCUMENT_ID}/pubhtml`;
 
-const TABLES = [
+const tables = [
   {
     name: 'project',
-    gid: '0',
+    sheetId: '0',
   },
   {
     name: 'people',
-    gid: '252072184',
+    sheetId: '252072184',
   },
 ];
 
-function htmlUrl(gid) {
-  return `https://docs.google.com/spreadsheets/d/e/${SHEET_ID}/pubhtml?gid=${gid}&single=true`;
+function cleanTable(table) {
+  table.removeChild(table.querySelector('thread'));
+
+  table.querySelectorAll('th').forEach((element) => {
+    element.parentNode.removeChild(element);
+  });
 }
 
-async function fetchHTML(url) {
+async function loadTable(sheetId) {
+  const url = `${DOCUMENT_URL}?gid=${sheetId}&single=true`;
+
   const { data } = await axios.get(url);
 
-  return await cheerio.load(data, { decodeEntities: true });
-}
+  const root = parse(sanitizeHtml(data));
+  const table = root.querySelector('table');
 
-async function fetchTables(table) {
-  const { name, gid } = table;
+  cleanTable(table);
 
-  const sheetHTML= await fetchHTML(htmlUrl(gid));
-
-  const tableHTML = await sanitizeHtml(sheetHTML('table').html());
-
-  return {
-    name,
-    html: tableHTML,
-  };
+  return pretty(table.outerHTML) + '\n';
 }
 
 async function main() {
-  const sheets = await Promise.all(
-    TABLES.map(fetchTables),
+  await Promise.all(
+    tables.map(async ({ name, sheetId }) => {
+      const html = await loadTable(sheetId);
+      await promisify(fs.writeFile)(`data/${name}.html`, html);
+    }),
   );
 
-  const tables = sheets.reduce((acc, table) => ({
-    ...acc,
-    [table.name]: table.html,
-  }), {});
-
-  await print(JSON.stringify(tables, null, '  '));
+  print('Complete!');
 }
 
 main();
+
+

@@ -4,7 +4,7 @@
 
 - 구글 스프레드 시트
 - axios
-- [cheerio](https://cheerio.js.org/)
+- [node-html-parser](https://github.com/taoqf/node-html-parser)
 - [sanitize-html](https://github.com/apostrophecms/sanitize-html)
 
 ## 구글 스프레드 시트로 테이블 만들기
@@ -18,16 +18,15 @@
 ```bash
 npm init -y
 
-npm i axios cheerio sanitize-html
+npm i axios node-html-parser sanitize-html
 ```
 
 ## 테이블 HTML 추출하기
 
 - [table-generator.js](https://github.com/moonkii/tutorial-book/blob/master/20200629-table-generator/table-generator.js)
 
-리엑트에서 `<table>` 의 내부에 삽입하기 위헤 `<table> </table>` 을 제외한 내부 태그만 속성을 모두 제거한 HTML 코드를 추출
+`<table>`을 포함한 내부 태그의 속성을 모두 제거 하고 `<thead>`를 제거한 HTML 코드를 추출
 
 ```bash
-# table.html 로 html 만 뽑아서도 활용 가능
-node index > data/table.json
+node table-generator.js
 ```

@@ -1,4 +1,0 @@
-{
-  "project": "<thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><th><div>1</div></th><td>프로젝트</td><td>구글 시트로 테이블 HTML 만들기</td></tr><tr><th><div>2</div></th><td>사용 기술</td><td>구글 스프레드 시트</td></tr><tr><th><div>3</div></th><td>axios</td></tr><tr><th><div>4</div></th><td>cherrio</td></tr><tr><th><div>5</div></th><td>sanitize-html</td></tr></tbody>",
-  "people": "<thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><th><div>1</div></th><td>이름</td><td>생일</td></tr><tr><th><div>2</div></th><td>노아</td><td>6월 5일</td></tr><tr><th><div>3</div></th><td>미미</td><td>9월 7일</td></tr></tbody>"
-}
