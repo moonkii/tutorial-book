@@ -1,0 +1,27 @@
+{
+  "name": "20200811-express-api",
+  "version": "1.0.0",
+  "description": "express-api-project-example",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "lint": "eslint --fix .",
+    "test": "jest",
+    "watch": "jest --watchAll"
+  },
+  "author": "moonkii",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "@types/supertest": "^2.0.10",
+    "eslint": "^7.6.0",
+    "jest": "^26.3.0",
+    "supertest": "^4.0.2"
+  }
+}
