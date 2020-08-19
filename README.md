@@ -10,4 +10,4 @@
 
 - [Express API 서버 프로젝트 세팅하기](https://github.com/moonkii/tutorial-book/tree/master/20200811-express-api)
 
-- [리엑트에서 마크다운으로 페이지 보여주기](https://github.com/moonkii/tutorial-book/tree/master/20200819-react-markdown)
+- [리엑트에서 마크다운 페이지 보여주기](https://github.com/moonkii/tutorial-book/tree/master/20200819-react-markdown)
