@@ -47,9 +47,7 @@ npm i react react-dom
 ## Redux 설치
 
 ```bash
-npm i redux react-redux
-
-npm i -D @reduxjs/toolkit
+npm i redux react-redux @reduxjs/toolkit
 ```
 
 ## 그 외 기타 모듈들 설치
