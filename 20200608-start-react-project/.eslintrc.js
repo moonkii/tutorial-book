@@ -41,6 +41,8 @@ module.exports = {
     'key-spacing': ['error', { mode: 'strict' }],
     'arrow-spacing': ['error', { before: true, after: true }],
     'react/prop-types': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
     'no-unused-vars': ['error', { varsIgnorePattern: 'jsx' }],
   },
