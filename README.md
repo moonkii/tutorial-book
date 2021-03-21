@@ -4,7 +4,7 @@
 
 - [Expo 를 이용해 React Native 시작하기](https://github.com/moonkii/tutorial-book/tree/main/20200525-react-native-with-expo)
 
-- [리엑트 프로젝트 세팅하기](https://github.com/moonkii/tutorial-book/tree/main/20200608-start-react-project)
+- [리엑트 프로젝트 세팅하기](https://github.com/moonkii/tutorial-book/tree/main/20210118-start-react-project)
 
 - [구글 시트로 간단하게 HTML 테이블 만들기](https://github.com/moonkii/tutorial-book/tree/main/20200629-table-generator)
 
