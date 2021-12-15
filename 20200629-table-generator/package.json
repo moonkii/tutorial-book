@@ -9,7 +9,7 @@
   "author": "Noah",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "node-html-parser": "^1.2.20",
     "pretty": "^2.0.0",
     "sanitize-html": "^2.3.2"
