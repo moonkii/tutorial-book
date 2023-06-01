@@ -205,7 +205,7 @@ npm i -D parcel
 ### React Testing Library 설치
 
 ```shell
-npm i -D @testing-library/react jest-environment-jsdom
+npm i -D @testing-library/react jest-environment-jsdom @testing-library/jest-dom
 ```
 
 ### Jest 설정 변경
@@ -226,7 +226,7 @@ npm i -D msw
 
 ### MSW 관련 파일 생성
 
-`src/setupTests.ts`, `src/mocks/server.ts`, `src/mocks/handler.ts` 파일 추가
+`src/setupTests.ts`, `src/mocks/server.ts`, `src/mocks/handlers.ts` 파일 추가
 
 ### Jest 설정 변경
 
